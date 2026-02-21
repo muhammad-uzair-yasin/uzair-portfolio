@@ -1,11 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { BookOpen, Laptop, BrainCircuit } from "lucide-react";
+import { BookOpen, Laptop, BrainCircuit, Briefcase } from "lucide-react";
 
 const education = [
   {
     id: 1,
+    title: "Agentic AI & Backend Developer | Cartlow",
+    description:
+      "Developing Agentic AI systems using LangChain, CrewAI, and LLMs to automate business processes and enhance decision-making workflows. Designing and optimizing backend APIs with FastAPI and Django, ensuring scalability, performance, and seamless integration with frontend systems. Building AI-powered features including data summarization, chatbot automation, and intelligent content generation. Implementing n8n workflows for business process automation and enterprise integration. Deploying applications with Docker and CI/CD pipelines for continuous integration and automated testing.",
+    icon: Briefcase,
+    year: "May 2025 – Present",
+  },
+  {
+    id: 2,
     title: "Bachelor of Business and Information Technology | UET Lahore",
     description:
       "Currently pursuing my Bachelor's degree at University of Engineering and Technology, Lahore (2022-Present) with a 3.5 CGPA. Building a strong foundation in business and information technology, combining technical expertise with business acumen.",
@@ -13,7 +21,7 @@ const education = [
     year: "2022-Present",
   },
   {
-    id: 2,
+    id: 3,
     title: "FSC Pre-Engineering | Barrett Hodgson International College",
     description:
       "Completed FSC Pre-Engineering from Barrett Hodgson International College (2020-2022) with an A+ Grade. This foundation prepared me for advanced studies in technology and engineering.",
@@ -21,7 +29,7 @@ const education = [
     year: "2020-2022",
   },
   {
-    id: 3,
+    id: 4,
     title: "Generative AI Expert | Full-Stack Developer",
     description:
       "Specializing in building AI-driven applications and scalable solutions using Python, FastAPI, Next.js, and modern AI frameworks. Passionate about leveraging cutting-edge technologies like LangChain, LangGraph, and CrewAI to create efficient and scalable products.",

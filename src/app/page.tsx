@@ -32,13 +32,10 @@ const Homepage = () => {
         <AboutMe />
         <Skills />
 
-        {/*Hero section  *
-        <About />*Hero section  */}
-        <Education />
-
         <Projects />
 
         <Certificates />
+        <Education />
 
         <Contact />
         <Footer />
