@@ -35,7 +35,7 @@ rounded-2xl shadow-[0_0_25px_#3b82f630] px-4 sm:px-6 md:px-8 py-3"
 >
         {/* Logo */}
         <Link href="#home" className="flex items-center gap-2 shrink-0" onClick={(e) => { e.preventDefault(); handleScroll("home"); }}>
-          <Image src="/images/logo.png" alt="Muhammad Uzair" width={40} height={40} className="rounded-lg object-contain" />
+          <Image src="/images/logo.png" alt="Muhammad Uzair" width={56} height={56} className="rounded-lg object-contain" />
           <span className="text-[22px] sm:text-[25px] font-bold text-white tracking-wide hover:text-blue-400 transition hidden sm:inline">
             Muhammad Uzair
           </span>

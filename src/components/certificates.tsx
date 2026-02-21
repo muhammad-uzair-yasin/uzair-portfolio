@@ -3,54 +3,135 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+function pdfToImageSlug(pdfFilename: string): string {
+  const title = pdfFilename.replace(/\.pdf$/i, "").trim();
+  const explicitSlug: Record<string, string> = {
+    "Introduction to HTML, CSS, & JavaScript": "introduction-to-html-css--javascript",
+    "Prompt and Context Engg ": "prompt-and-context-engg-",
+    "Prompt and Context Engg": "prompt-and-context-engg-",
+  };
+  if (explicitSlug[title]) return explicitSlug[title];
+  return title
+    .replace(/\s+/g, "-")
+    .toLowerCase()
+    .replace(/&/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/^-+|-+$/g, "");
+}
+
+const backendCertificates = [
+  "Introduction to FastAPI framework.pdf",
+  "Crash Course on Python.pdf",
+  "Python Programming Fundamentals.pdf",
+];
+
+const aiCertificates = [
+  "Agentic AI level 1.pdf",
+  "Agentic Ai Level 2.pdf",
+  "AI Agents: From Prompts to Multi-Agent Systems.pdf",
+  "AI For Everyone.pdf",
+  "Generative AI Application Developer Certificate.pdf",
+  "Introduction to Generative AI.pdf",
+  "Introduction to Large Language Models.pdf",
+  "Introduction to Responsible AI.pdf",
+  "Microsoft Certified: Azure AI Fundamentals.pdf",
+  "Responsible AI: Applying AI Principles with Google Cloud.pdf",
+  "Prompt and Context Engg .pdf",
+];
+
+const frontendCertificates = [
+  "HTML and CSS in depth.pdf",
+  "Introduction to HTML, CSS, & JavaScript.pdf",
+  "Introduction to Next.js.pdf",
+  "Tailwind CSS Basics.pdf",
+  "Tailwind CSS Practice Project: Build a Product Card.pdf",
+  "Tailwind CSS Practice Projects.pdf",
+];
+
+const issuerByTitle: Record<string, string> = {
+  "Crash Course on Python": "Google",
+  "Introduction to FastAPI framework": "Duke University",
+  "Python Programming Fundamentals": "Coursera",
+  "AI For Everyone": "DeepLearning.AI",
+  "Introduction to HTML, CSS, & JavaScript": "IBM",
+  "Introduction to Generative AI": "Google",
+  "Introduction to Large Language Models": "Google",
+  "Introduction to Responsible AI": "Google",
+  "Microsoft Certified: Azure AI Fundamentals": "Microsoft",
+  "Responsible AI: Applying AI Principles with Google Cloud": "Google Cloud",
+  "HTML and CSS in depth": "Meta / Coursera",
+  "Introduction to Next.js": "Vercel",
+  "Generative AI Application Developer Certificate": "Google Cloud",
+  "AI Agents: From Prompts to Multi-Agent Systems": "Coursera",
+  "Agentic AI level 1": "Presidential Initiative for AI & Computing",
+  "Agentic Ai Level 2": "Presidential Initiative for AI & Computing",
+  "Prompt and Context Engg ": "—",
+  "Prompt and Context Engg": "—",
+};
+
+const titleOverrides: Record<string, string> = {
+  "Agentic AI level 1": "Agentic AI Level One",
+  "Agentic Ai Level 2": "Agentic AI Level Two",
+  "Prompt and Context Engg ": "Prompt and Context Engineering",
+  "Prompt and Context Engg": "Prompt and Context Engineering",
+};
+
+function CertCard({
+  file,
+  index,
+}: {
+  file: string;
+  index: number;
+}) {
+  const title = file.replace(/\.pdf$/i, "").trim();
+  const displayTitle = titleOverrides[title] ?? title;
+  const issuer = issuerByTitle[title] ?? "—";
+  const pdfUrl = `/certificates/${encodeURIComponent(file)}`;
+  const imageSlug = pdfToImageSlug(file);
+  const image = `/images/certificates/${imageSlug}.png`;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 80 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: index * 0.1, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.2 }}
+      className="bg-[#0b0816] border border-blue-800 rounded-2xl overflow-hidden hover:shadow-[0_0_20px_#3b82f6] transition transform hover:-translate-y-2"
+    >
+      <div className="relative w-full h-56 bg-black flex items-center justify-center">
+        <Image
+          src={image}
+          alt={displayTitle}
+          fill
+          className="object-contain p-2"
+          sizes="(max-width: 768px) 100vw, 33vw"
+        />
+      </div>
+      <div className="p-6">
+        <h4 className="text-lg font-semibold">{displayTitle}</h4>
+        <p className="text-gray-300">{issuer}</p>
+        <p className="text-gray-400 text-sm">—</p>
+        <a
+          href={pdfUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-3 inline-block text-blue-500 border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition"
+        >
+          View Certificate
+        </a>
+      </div>
+    </motion.div>
+  );
+}
+
 const Certificates = () => {
-  const certificates = [
-    {
-      title: "Introduction to FastAPI framework",
-      issuer: "Duke University",
-      year: "January 2025",
-      link: "https://www.coursera.org/account/accomplishments/verify/6SQCYK51ATQ3?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=sharing_cta&utm_product=project",
-      image: "/images/WhatsApp Image 2026-02-11 at 2.38.37 AM.jpeg",
-    },
-    {
-      title: "Career Essentials in Generative AI",
-      issuer: "Microsoft/LinkedIn",
-      year: "March 2024",
-      link: "https://www.linkedin.com/learning/certificates/29caa359109f170aa647f3d3d33f706d7dc310963c54bd1659cb9e16fce8b9a9?trk=share_certificate",
-      image: "/images/WhatsApp Image 2026-02-11 at 2.38.01 AM.jpeg",
-    },
-    {
-      title: "Crash Course on Python",
-      issuer: "Google",
-      year: "2024",
-      link: null,
-      image: "/images/WhatsApp Image 2026-02-11 at 2.37.04 AM.jpeg",
-    },
-    {
-      title: "AI & Machine Learning",
-      issuer: "UET",
-      year: "2024",
-      link: null,
-      image: "/images/WhatsApp Image 2026-02-11 at 2.36.30 AM.jpeg",
-    },
-    {
-      title: "T3 Stack Certification",
-      issuer: "T3 Stack",
-      year: "2024",
-      link: null,
-      image: "/images/WhatsApp Image 2026-02-11 at 2.36.04 AM.jpeg",
-    },
-    {
-      title: "Additional Certification",
-      issuer: "Various",
-      year: "2024",
-      link: null,
-      image: "/images/WhatsApp Image 2026-02-11 at 2.35.41 AM.jpeg",
-    },
+  const sections = [
+    { id: "ai", title: "AI Related Certificates", files: aiCertificates },
+    { id: "backend", title: "Backend Related Certificates", files: backendCertificates },
+    { id: "frontend", title: "Frontend Related Certificates", files: frontendCertificates },
   ];
 
   return (
-    // ✅ Section with ID for navbar smooth scroll
     <section
       id="certificates"
       className="bg-[#070615f8] text-white py-16 px-6 scroll-mt-20"
@@ -63,53 +144,18 @@ const Certificates = () => {
           </span>
         </h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {certificates.map((cert, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 80 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.15,
-                ease: "easeOut",
-              }}
-              viewport={{ once: true, amount: 0.2 }}
-              className="bg-[#0b0816] border border-blue-800 rounded-2xl overflow-hidden hover:shadow-[0_0_20px_#3b82f6] transition transform hover:-translate-y-2"
-            >
-              <div className="relative w-full h-56 bg-black flex items-center justify-center">
-                <Image
-                  src={cert.image}
-                  alt={cert.title}
-                  fill
-                  className="object-contain p-2"
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                />
-              </div>
-
-              <div className="p-6">
-                <h4 className="text-lg font-semibold">{cert.title}</h4>
-                <p className="text-gray-300">{cert.issuer}</p>
-                <p className="text-gray-400 text-sm">{cert.year}</p>
-
-                {cert.link ? (
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-3 inline-block text-blue-500 border border-blue-500 px-4 py-2 rounded-lg hover:bg-blue-500 hover:text-black transition"
-                  >
-                    View Certificate
-                  </a>
-                ) : (
-                  <span className="mt-3 inline-block text-gray-500 border border-gray-500 px-4 py-2 rounded-lg cursor-not-allowed">
-                    Certificate
-                  </span>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        {sections.map((section) => (
+          <div key={section.id} className="mb-16 last:mb-0">
+            <h3 className="text-xl sm:text-2xl font-bold text-cyan-400 mb-6 border-b border-blue-800 pb-2">
+              {section.title}
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              {section.files.map((file, index) => (
+                <CertCard key={file} file={file} index={index} />
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

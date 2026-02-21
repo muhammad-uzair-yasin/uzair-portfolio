@@ -65,7 +65,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <Image src="/images/logo.png" alt="Muhammad Uzair" width={48} height={48} className="rounded-lg object-contain shrink-0" />
+            <Image src="/images/logo.png" alt="Muhammad Uzair" width={64} height={64} className="rounded-lg object-contain shrink-0" />
             <div>
               <h2 className="text-2xl font-extrabold tracking-wide text-white">
                 Muhammad{" "}
