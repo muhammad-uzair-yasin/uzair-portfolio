@@ -21,7 +21,7 @@ export default function Footer() {
       "He builds full-stack applications, AI-powered tools, and scalable backend systems. Check out his Projects section for repos and demos!",
     goals:
       "Uzair's goal is to create efficient and scalable products leveraging cutting-edge technologies like LangChain, LangGraph, and CrewAI, combining full-stack development with Generative AI.",
-    contact: "You can connect with Uzair on GitHub (github.com/Uzair-DevOps) or email (uzairyasin395@gmail.com)! 💼",
+    contact: "You can connect with Uzair on GitHub (github.com/Uzair-DevOps) or email (uzair@muhammad-uzair.com)! 💼",
   };
 
   useEffect(() => {
@@ -113,7 +113,7 @@ export default function Footer() {
                 },
                 {
                   icon: <Mail className="w-6 h-6" />,
-                  link: "mailto:uzairyasin395@gmail.com",
+                  link: "mailto:uzair@muhammad-uzair.com",
                 },
               ].map((social, idx) => (
                 <motion.a

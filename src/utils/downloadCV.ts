@@ -127,7 +127,7 @@ const createCVHTML = (): string => {
         <h1 style="font-size: 36px; font-weight: bold; color: #1f2937; margin-bottom: 8px;">Muhammad Uzair</h1>
         <p style="font-size: 20px; color: #4b5563; margin-bottom: 12px;">Full-Stack Developer & Generative AI Expert</p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 14px; color: #6b7280;">
-          <span>📧 uzairyasin395@gmail.com</span>
+          <span>📧 uzair@muhammad-uzair.com</span>
           <span>💻 github.com/Uzair-DevOps</span>
           <span>📍 Toba Tek Singh, Pakistan</span>
         </div>

@@ -9,7 +9,7 @@ const CV = () => {
         <h1 className="text-4xl font-bold text-gray-900 mb-2">Muhammad Uzair</h1>
         <p className="text-xl text-gray-700 mb-3">Full-Stack Developer & Generative AI Expert</p>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-          <span>📧 uzairyasin395@gmail.com</span>
+          <span>📧 uzair@muhammad-uzair.com</span>
           <span>💻 github.com/Uzair-DevOps</span>
           <span>📍 Toba Tek Singh, Pakistan</span>
         </div>

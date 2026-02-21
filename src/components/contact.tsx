@@ -77,10 +77,10 @@ const Contact = () => {
           <div className="flex items-center gap-3 z-10">
             <Mail className="text-blue-400 w-6 h-6" />
             <a
-              href="mailto:uzairyasin395@gmail.com"
+              href="mailto:uzair@muhammad-uzair.com"
               className="text-white font-semibold underline hover:text-blue-400 transition"
             >
-              uzairyasin395@gmail.com
+              uzair@muhammad-uzair.com
             </a>
           </div>
         </div>
