@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-
+import Image from "next/image";
 import { Github, Mail, MessageCircle, Send, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -64,16 +64,19 @@ export default function Footer() {
 
         <div className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-10 relative z-10">
           {/* Brand */}
-          <div>
-            <h2 className="text-2xl font-extrabold tracking-wide text-white">
-              Muhammad{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">
-                Uzair
-              </span>
-            </h2>
-            <p className="mt-3 text-gray-400 text-sm leading-relaxed">
-              Full-Stack Developer • Generative AI Expert & Modern Frameworks ✨
-            </p>
+          <div className="flex items-center gap-3">
+            <Image src="/images/logo.png" alt="Muhammad Uzair" width={48} height={48} className="rounded-lg object-contain shrink-0" />
+            <div>
+              <h2 className="text-2xl font-extrabold tracking-wide text-white">
+                Muhammad{" "}
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text text-transparent">
+                  Uzair
+                </span>
+              </h2>
+              <p className="mt-3 text-gray-400 text-sm leading-relaxed">
+                Full-Stack Developer • Generative AI Expert & Modern Frameworks ✨
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}

@@ -17,8 +17,11 @@ export const metadata: Metadata = {
   title: "Muhammad Uzair - Portfolio",
   description: "Generative AI Expert & Full-Stack Developer specializing in building AI-driven applications and scalable solutions using Python, FastAPI, Next.js, and modern AI frameworks.",
   icons: {
-    icon: "/icon.png",
-    apple: "/icon.png",
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
+  openGraph: {
+    images: ["/images/logo.png"],
   },
 };
 
