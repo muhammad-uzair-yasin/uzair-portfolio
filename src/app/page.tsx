@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import Skills from "@/components/Services";
 
 import Projects from "@/components/projects";
+import N8nWorkflows from "@/components/N8nWorkflows";
 import Contact from "@/components/contact";
 import Certificates from "@/components/certificates";
 import Footer from "@/components/footer";
@@ -33,7 +34,7 @@ const Homepage = () => {
         <Skills />
 
         <Projects />
-
+        <N8nWorkflows />
         <Certificates />
         <Education />
 

@@ -128,7 +128,7 @@ const createCVHTML = (): string => {
         <p style="font-size: 20px; color: #4b5563; margin-bottom: 12px;">Full-Stack Developer & Generative AI Expert</p>
         <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; font-size: 14px; color: #6b7280;">
           <span>📧 uzair@muhammad-uzair.com</span>
-          <span>💻 github.com/Uzair-DevOps</span>
+          <span>💻 github.com/muhammad-uzair-yasin</span>
           <span>📍 Toba Tek Singh, Pakistan</span>
         </div>
       </div>
@@ -243,7 +243,7 @@ const createCVHTML = (): string => {
           </div>
           <div>
             <h3 style="font-weight: 600; color: #1f2937; font-size: 16px; margin-bottom: 4px;">AI Image Generator</h3>
-            <p style="font-size: 12px; color: #6b7280; margin-bottom: 6px;">GitHub: github.com/Uzair-DevOps/AI-Image-Generator</p>
+            <p style="font-size: 12px; color: #6b7280; margin-bottom: 6px;">GitHub: github.com/muhammad-uzair-yasin/AI-Image-Generator</p>
             <p style="color: #374151; font-size: 13px; line-height: 1.6; margin-bottom: 4px;">
               AI-powered image generator with real-time generation, customizable parameters, and gallery view. 
               Built with Next.js, TypeScript, Prisma, and Neon for robust data management.

@@ -60,10 +60,40 @@ const projects = [
     title: "Postsiva – YouTube Automation",
     description:
       "YouTube automation platform that streamlines content creation and channel growth. Users upload videos and the platform automatically generates AI-powered titles, descriptions, thumbnails, and timestamps based on channel persona. Features include smart scheduling, auto-publishing, channel analytics with growth trends, and an AI Comment Replier that engages with viewers 24/7 using your channel voice. Built with FastAPI backend integrating YouTube Data API and YouTube Analytics API for seamless automation.",
-    link: "https://github.com/Uzair-DevOps",
+    link: "https://github.com/muhammad-uzair-yasin/",
     demo: "https://youtube.postsiva.com/",
     images: ["/images/WhatsApp Image 2026-02-10 at 3.28.54 PM.jpeg"],
     tags: ["FastAPI", "Python", "Next.js", "AI", "Backend Development", "REST API", "YouTube Automation"],
+  },
+  {
+    id: 7,
+    title: "Postsiva – LinkedIn Automation",
+    description:
+      "LinkedIn automation and growth platform to grow presence faster and smarter. Create, schedule, and publish posts with AI-generated content for personal profiles and company pages from one platform. Features include AI content generation (idea-to-post, enhance, content-to-image), persona builder, media storage, scheduling, and analytics. I architected and built the backend using FastAPI, with official LinkedIn APIs and OAuth for safe, secure automation.",
+    link: null,
+    demo: "https://linkedin.postsiva.com/",
+    images: ["/images/linkedin-postsiva.png"],
+    tags: ["FastAPI", "Python", "Backend", "LinkedIn API", "AI", "REST API", "OAuth"],
+  },
+  {
+    id: 8,
+    title: "MoboCheck Platform",
+    description:
+      "MoboCheck Backoffice is a full-stack, multi-role enterprise dashboard built with React and TypeScript. Permissions for all roles—including admins—are managed in the backend via Casbin and sent dynamically to the frontend, ensuring each user sees only the features allowed for their role. The platform includes secure REST APIs, role-based authentication, real-time updates, database operations, notifications, activity logging, and a responsive dashboard for managing users, devices, orders, licenses, and organization settings according to assigned permissions.",
+    link: null,
+    demo: "https://mobocheck.com",
+    images: ["/images/mobocheck.png"],
+    tags: ["React", "Node.js", "MySQL", "Casbin", "Tailwind CSS", "REST API"],
+  },
+  {
+    id: 9,
+    title: "Qyra AI Assistant",
+    description:
+      "A comprehensive AI-driven ecosystem designed to streamline daily life. Seamlessly integrated with the Esqyra Watch, the application delivers complete information through fluid voice and chat interactions. It merges intelligent task management with proactive health and productivity insights, offering personalized recommendations, real-time location tracking, and local weather updates. The system also features a curated news aggregator—covering politics, social trends, and global events—all visualized within a sleek, fully responsive dashboard.",
+    link: null,
+    demo: "https://app.esqyra.com",
+    images: ["/images/qyra-ai.png"],
+    tags: ["React Native", "TypeScript", "REST API", "MySQL", "Tailwind CSS", "AI"],
   },
 ];
 
@@ -275,17 +305,6 @@ const Projects = () => {
             </div>
           </motion.div>
         ))}
-      </div>
-      {/* See More Projects Button */}
-      <div className="flex justify-center mt-10">
-        <Link
-          href="https://github.com/Uzair-DevOps"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="px-6 py-3 font-semibold text-lg rounded-lg bg-gradient-to-r from-blue-600 to-cyan-600 hover:opacity-90 hover:scale-105 transition-all duration-300 text-white"
-        >
-          See More Projects
-        </Link>
       </div>
     </section>
   );

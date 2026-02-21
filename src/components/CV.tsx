@@ -10,7 +10,7 @@ const CV = () => {
         <p className="text-xl text-gray-700 mb-3">Full-Stack Developer & Generative AI Expert</p>
         <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
           <span>📧 uzair@muhammad-uzair.com</span>
-          <span>💻 github.com/Uzair-DevOps</span>
+          <span>💻 github.com/muhammad-uzair-yasin</span>
           <span>📍 Toba Tek Singh, Pakistan</span>
         </div>
       </div>
@@ -125,7 +125,7 @@ const CV = () => {
           </div>
           <div>
             <h3 className="font-semibold text-gray-800">AI Image Generator</h3>
-            <p className="text-sm text-gray-600 mb-1">GitHub: github.com/Uzair-DevOps/AI-Image-Generator</p>
+            <p className="text-sm text-gray-600 mb-1">GitHub: github.com/muhammad-uzair-yasin/AI-Image-Generator</p>
             <p className="text-gray-700 text-sm">
               AI-powered image generator with real-time generation, customizable parameters, and gallery view. 
               Built with Next.js, TypeScript, Prisma, and Neon for robust data management.
